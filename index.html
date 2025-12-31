@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0xBM0 | Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+    <!-- Logo -->
+    <div class="logo">
+      <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="cyan" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 
+            10-10S17.52 2 12 2zm3.07 14.25l-1.41 1.41L12 
+            13.41l-1.66 1.66-1.41-1.41L10.59 12 8.93 
+            10.34l1.41-1.41L12 10.59l1.66-1.66 
+            1.41 1.41L13.41 12l1.66 1.66z"/>
+      </svg>
+    </div>
+
+    <!-- Title -->
+    <div class="header-text">
+      <h1>0xBM0</h1>
+      <p>Reverse Engineering • Low-Level • Cybersecurity</p>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="active">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <h2 class="page-title">Home Page</h2>
+
+  <!-- GRID: About + Stack / Tags + Interests -->
+  <div class="top-grid">
+
+    <section class="about-stack">
+      <h2>About Me</h2>
+      <p>
+        I’m <strong>0xBM0</strong>, 17 years old, interested in Reverse Engineering
+        and low-level programming. I focus on understanding how software works
+        internally through binary analysis.
+      </p>
+
+      <div class="stack">
+        <h3>Current Stack</h3>
+        <ul>
+          <li><strong>C / C++</strong> – learning & practice</li>
+          <li><strong>Assembly</strong> – learning</li>
+          <li><strong>Cutter</strong> (Rizin UI)</li>
+          <li><strong>x64dbg</strong></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="tags-interests">
+      <h2>Tags & Interests</h2>
+      <div class="tags">
+        <span class="tag">Reverse Engineering</span>
+        <span class="tag">Low-Level</span>
+        <span class="tag">Binary Analysis</span>
+        <span class="tag">Assembly</span>
+        <span class="tag">Systems Internals</span>
+        <span class="tag">C / C++</span>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- PROJECTS -->
+  <section class="projects">
+    <h2>Projects</h2>
+
+    <div class="project-card"
+      ondblclick="openProject('https://github.com/shellshock0x221B/3d-solar-system')">
+      <h3>3D Solar System</h3>
+      <span>C • raylib</span>
+      <p>
+        A 3D solar system simulation written in C using raylib.
+        Double-click to view the project on GitHub.
+      </p>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  © 2025 0xBM0 — Learning one binary at a time.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
