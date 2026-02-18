@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,50 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>0xBM0 | Contact</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-  <div class="header-content">
-    <div class="logo">
-      <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="cyan" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 
-            10-10S17.52 2 12 2zm3.07 14.25l-1.41 1.41L12 
-            13.41l-1.66 1.66-1.41-1.41L10.59 12 8.93 
-            10.34l1.41-1.41L12 10.59l1.66-1.66 
-            1.41 1.41L13.41 12l1.66 1.66z"/>
-      </svg>
+  <div class="cursor-glow"></div>
+
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#64ffda" stroke-width="1.8">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.07 14.25l-1.41 1.41L12 13.41l-1.66 1.66-1.41-1.41L10.59 12 8.93 10.34l1.41-1.41L12 10.59l1.66-1.66 1.41 1.41L13.41 12l1.66 1.66z"/>
+          </svg>
+        </div>
+        <div class="header-text">
+          <h1>0xBM0</h1>
+          <p>Security Researcher • Reverse Engineering • Low-Level Systems</p>
+        </div>
+      </div>
+
+      <nav class="navbar">
+        <a href="index.html">_home</a>
+        <a href="blog.html">_blog</a>
+        <a href="contact.html" class="active">_contact</a>
+      </nav>
     </div>
-    <div class="header-text">
-      <h1>0xBM0</h1>
-      <p>Reverse Engineering • Low-Level • Cybersecurity</p>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <h2>> contact</h2>
+      <p class="hero-sub">get in touch for research, collabs, or questions</p>
     </div>
-  </div>
 
-  <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html" class="active">Contact</a>
-  </nav>
-</header>
+    <div class="grid-2col">
+      <section class="card">
+        <h3>> reach_me</h3>
+        <div class="contact-methods">
+          <a href="mailto:shellshock0x1@proton.me" class="contact-item">
+            <span class="contact-icon">✉</span>
+            <span class="contact-detail">shellshock0x1@proton.me</span>
+          </a>
+          <a href="https://twitter.com/OxBM0" target="_blank" class="contact-item">
+            <span class="contact-icon">𝕏</span>
+            <span class="contact-detail">@OxBM0</span>
+          </a>
+          <a href="https://github.com/shellshock0x221B" target="_blank" class="contact-item">
+            <span class="contact-icon">⌨</span>
+            <span class="contact-detail">shellshock0x221B</span>
+          </a>
+          <a href="#" class="contact-item">
+            <span class="contact-icon">🔑</span>
+            <span class="contact-detail">PGP: 0x......</span>
+          </a>
+        </div>
+      </section>
 
-<main>
-  <h2 class="page-title">Contact Me</h2>
+      <section class="card">
+        <h3>> pgp_key</h3>
+        <div class="pgp-block">
+          <pre class="pgp-fingerprint">
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: ProtonMail
 
-  <section>
-    <h2>Get in touch</h2>
-    <ul class="contact-list">
-      <li>X/Twitter: <a href="https://x.com/OxBM0" target="_blank">@OxBM0</a></li>
-      <li>Email: <a href="mailto:shellshock0x1@proton.me">shellshock0x1@proton.me</a></li>
-      <li>GitHub: <a href="https://github.com/shellshock0x221B" target="_blank">shellshock0x221B</a></li>
-    </ul>
-  </section>
+xjMEZxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+-----END PGP PUBLIC KEY BLOCK-----</pre>
+          <button class="copy-btn" onclick="copyPGP()">copy key</button>
+        </div>
+        <p class="pgp-note">For secure communication, use my PGP key above</p>
+      </section>
+    </div>
 
-</main>
+    <section class="card discord-section">
+      <h3>> discord</h3>
+      <p>Join my server for RE discussions and community help</p>
+      <a href="#" class="discord-link">discord.gg/0xbm0_lab</a>
+    </section>
+  </main>
 
-<footer>
-  © 2025 0xBM0 — Learning one binary at a time.
-</footer>
+  <footer>
+    <div class="container">
+      <p>© 2025 0xBM0 — Learning one byte at a time</p>
+      <p class="footer-mono">[reverse.engineer@root ~]$</p>
+    </div>
+  </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
