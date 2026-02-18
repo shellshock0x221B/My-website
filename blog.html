@@ -5,46 +5,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>0xBM0 | Blog</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-  <div class="header-content">
-    <div class="logo">
-      <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="cyan" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 
-            10-10S17.52 2 12 2zm3.07 14.25l-1.41 1.41L12 
-            13.41l-1.66 1.66-1.41-1.41L10.59 12 8.93 
-            10.34l1.41-1.41L12 10.59l1.66-1.66 
-            1.41 1.41L13.41 12l1.66 1.66z"/>
-      </svg>
+  <div class="cursor-glow"></div>
+
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#64ffda" stroke-width="1.8">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.07 14.25l-1.41 1.41L12 13.41l-1.66 1.66-1.41-1.41L10.59 12 8.93 10.34l1.41-1.41L12 10.59l1.66-1.66 1.41 1.41L13.41 12l1.66 1.66z"/>
+          </svg>
+        </div>
+        <div class="header-text">
+          <h1>0xBM0</h1>
+          <p>Security Researcher • Reverse Engineering • Low-Level Systems</p>
+        </div>
+      </div>
+
+      <nav class="navbar">
+        <a href="index.html">_home</a>
+        <a href="blog.html" class="active">_blog</a>
+        <a href="contact.html">_contact</a>
+      </nav>
     </div>
-    <div class="header-text">
-      <h1>0xBM0</h1>
-      <p>Reverse Engineering • Low-Level • Cybersecurity</p>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <h2>> blog_posts</h2>
+      <p class="hero-sub">writeups • research • experiments</p>
     </div>
-  </div>
 
-  <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="blog.html" class="active">Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+    <div class="blog-filters">
+      <button class="filter-btn active" data-filter="all">all</button>
+      <button class="filter-btn" data-filter="reverse">reverse engineering</button>
+      <button class="filter-btn" data-filter="exploit">exploitation</button>
+      <button class="filter-btn" data-filter="lowlevel">low-level</button>
+    </div>
 
-<main>
-  <h2 class="page-title">Blog Page</h2>
+    <div class="blog-grid">
+      <article class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-date">2025.02.15</span>
+          <span class="blog-category">reverse engineering</span>
+        </div>
+        <h3><a href="#">Crackme Challenge Writeup</a></h3>
+        <p>Detailed analysis of a custom crackme using IDA Pro and x64dbg</p>
+        <div class="blog-tags">
+          <span class="tag-small">x86</span>
+          <span class="tag-small">ida</span>
+          <span class="tag-small">crackme</span>
+        </div>
+      </article>
 
-  <section>
-    <h2>Coming Soon</h2>
-    <p>All write-ups, experiments, and projects will appear here soon!</p>
-  </section>
+      <article class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-date">2025.02.01</span>
+          <span class="blog-category">low-level</span>
+        </div>
+        <h3><a href="#">Understanding the Stack Frame</a></h3>
+        <p>Deep dive into function prologues, epilogues, and stack memory layout</p>
+        <div class="blog-tags">
+          <span class="tag-small">assembly</span>
+          <span class="tag-small">memory</span>
+          <span class="tag-small">calling convention</span>
+        </div>
+      </article>
 
-</main>
+      <article class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-date">2025.01.20</span>
+          <span class="blog-category">tools</span>
+        </div>
+        <h3><a href="#">Setting Up Your RE Lab</a></h3>
+        <p>Complete guide to building a reverse engineering environment</p>
+        <div class="blog-tags">
+          <span class="tag-small">tools</span>
+          <span class="tag-small">ghidra</span>
+          <span class="tag-small">gdb</span>
+        </div>
+      </article>
 
-<footer>
-  © 2025 0xBM0 — Learning one binary at a time.
-</footer>
+      <article class="blog-card coming-soon">
+        <div class="blog-meta">
+          <span class="blog-date">coming soon</span>
+        </div>
+        <h3>More writeups in progress...</h3>
+        <p>Buffer overflows, shellcode development, and game hacking tutorials</p>
+      </article>
+    </div>
+  </main>
 
-<script src="script.js"></script>
+  <footer>
+    <div class="container">
+      <p>© 2025 0xBM0 — Learning one byte at a time</p>
+      <p class="footer-mono">[reverse.engineer@root ~]$</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
