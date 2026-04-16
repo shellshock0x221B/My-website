@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Notre Temps Ensemble</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:
+        radial-gradient(circle at 20% 20%, #ff77aa 0%, transparent 30%),
+        radial-gradient(circle at 80% 30%, #8a5cff 0%, transparent 35%),
+        linear-gradient(160deg,#14051f 0%,#24113a 45%,#0f0818 100%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:18px;
+    color:white;
+    overflow:hidden;
+}
+
+.phone-card{
+    width:100%;
+    max-width:420px;
+    border-radius:32px;
+    padding:28px 22px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.14);
+    backdrop-filter:blur(18px);
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.35),
+        inset 0 1px 0 rgba(255,255,255,0.12);
+    text-align:center;
+}
+
+.top-heart{
+    font-size:2rem;
+    margin-bottom:10px;
+    animation:beat 1.4s infinite;
+}
+
+h1{
+    font-size:1.7rem;
+    line-height:1.3;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.subtitle{
+    font-size:.95rem;
+    opacity:.8;
+    margin-bottom:26px;
+}
+
+.timer-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+}
+
+.time-box{
+    padding:20px 10px;
+    border-radius:24px;
+    background:rgba(255,255,255,0.10);
+    border:1px solid rgba(255,255,255,0.10);
+    box-shadow:inset 0 0 20px rgba(255,255,255,0.03);
+}
+
+.time-value{
+    font-size:2rem;
+    font-weight:700;
+}
+
+.time-label{
+    margin-top:6px;
+    font-size:.8rem;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    opacity:.7;
+}
+
+.footer{
+    margin-top:22px;
+    font-size:.85rem;
+    opacity:.65;
+}
+
+@keyframes beat{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.18);}
+}
+
+@media (max-width:380px){
+    h1{
+        font-size:1.45rem;
+    }
+
+    .time-value{
+        font-size:1.7rem;
+    }
+
+    .phone-card{
+        padding:22px 16px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="phone-card">
+    <div class="top-heart">❤️</div>
+
+    <h1>Depuis le début de notre histoire</h1>
+    <p class="subtitle">Chaque instant avec toi est précieux.</p>
+
+    <div class="timer-grid">
+        <div class="time-box">
+            <div class="time-value" id="days">0</div>
+            <div class="time-label">Jours</div>
+        </div>
+
+        <div class="time-box">
+            <div class="time-value" id="hours">0</div>
+            <div class="time-label">Heures</div>
+        </div>
+
+        <div class="time-box">
+            <div class="time-value" id="minutes">0</div>
+            <div class="time-label">Minutes</div>
+        </div>
+
+        <div class="time-box">
+            <div class="time-value" id="seconds">0</div>
+            <div class="time-label">Secondes</div>
+        </div>
+    </div>
+
+    <div class="footer">Pour toujours ✨</div>
+</div>
+
+<script>
+const startDate = new Date("2026-04-09T23:11:00");
+
+function updateTimer(){
+    const now = new Date();
+    const diff = now - startDate;
+
+    const days = Math.floor(diff / (1000*60*60*24));
+    const hours = Math.floor((diff / (1000*60*60)) % 24);
+    const minutes = Math.floor((diff / (1000*60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+}
+
+setInterval(updateTimer,1000);
+updateTimer();
+</script>
+
+</body>
+</html>
